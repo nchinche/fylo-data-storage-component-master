@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+   
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1440px) {
+    
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+.container{
+    display: flex;
+    align-items: self-end;
+    gap: 30px;
+    margin: 20px 0;
+  
+}
+
+
+.fylo-section{
+    width: 340px;
+    height: 180px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 100px 10px 10px;
+     padding: 25px 0 0  30px;
+    line-height: 80px;
+}
+
+.storage{
+  padding: 35px 0 0px 50px;
+    width: 600px;
+    height: 150px;
+    background-color: hsl(228, 56%, 26%);
+border-radius: 10px;
+}
+
+.storage .first{
+color: hsl(6, 100%, 80%);
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.storage h1{
+    color: hsl(229, 7%, 55%);
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+
+.space{
+    padding: 2.9px 3px;
+    width: 500px;
+    height: 20px;
+    background-color:  hsl(229, 57%, 11%);
+    border-radius: 20px;
+    margin: 15px 0 8px 0;
+}
+
+.storage .percentages{
+    width: 370px;
+    height: 14px;
+    background:  linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+    padding: 1px 0;
+}
+
+.storage .hover{
+    padding: 5px 0 0 22px;
+    background-color: #fff;
+    width: 160px;
+    height: 60px;
+    border-radius: 10px 10px 0px 10px;
+    
+    position: relative;
+    
+    bottom: 150px;
+    left: 340px;
+}
+
+.hover h2{
+    color: hsl(229, 57%, 11%);
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hover .arrow{
+   width: 25px; 
+   height: 30px;
+   margin: 5px 0 0 108px;
+   border-left: 30px solid transparent;
+   border-top: 30px solid #fff;
+}
+
+
+.hover .second{
+    color: hsl(229, 7%, 55%);
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+
+.dot{
+    background-color:  #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 356px;
+    
+}
+
+.one{
+display: flex;
+align-items: center;
+justify-content: center;
+ background-color: hsl(229, 57%, 11%);
+height: 45px;
+width: 45px;
+margin: 0 15px 0 0;
+border-radius: 5px;
+}
+
+
+.folders{
+    display: flex;
+    align-items: center;
+}
+
+
+.pecentage{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+
+.pecentage h3{
+    font-size: 13px;
+    color: hsl(6, 100%, 80%);
+    font-weight: 700;
+}
+
+
+.attribution { 
+    font-size: 22px;
+     text-align: center;
+     color: #fff;
+     }
+
+
+
+
+.attribution a {
+ color: hsl(251, 40%, 52%);
+ }
+
+}
+
+@media (max-width: 375px) {
+    
+body,html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    gap: 30px;
+    margin: 70px 0;
+  
+}
+
+
+
+.fylo-section{
+    width: 330px;
+    height: 180px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 100px 10px 10px;
+     padding: 25px 0 0  30px;
+    line-height: 80px;
+}
+
+.storage{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:  0;
+     
+    width: 330px;
+    height: 150px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    /*text-align: center;*/
+}
+
+
+
+.storage h1{
+    color: hsl(229, 7%, 55%);
+    font-size: 15px;
+    font-family:  sans-serif;
+    
+}
+
+
+
+.space{
+    padding: 2.9px 3px;
+    width: 290px;
+    height: 20px;
+    background-color:  hsl(229, 57%, 11%);
+    border-radius: 20px;
+    margin: 15px 0 8px 0;
+}
+
+.storage .percentages{
+    width: 220px;
+    height: 14px;
+    background:  linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+    padding: 1px 0;
+}
+
+
+.dot{
+    background-color:  #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 205px;
+    
+}
+
+
+
+.pecentage{
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+
+
+
+.storage .hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    width: 180px;
+    height: 80px;
+    
+    position: absolute;
+    top: 470px;
+    left: 95px;
+    
+    
+    border-radius:  10px;
+}
+
+
+.hover .arrow{
+    width: 25px; 
+    height: 30px;
+    margin: 5px 0 0 108px;
+    border-left: 30px solid transparent;
+    border-top: 30px solid hsl(6, 100%, 80%);
+    display: none;
+ }
+
+ 
+.hover h2{
+    color: hsl(229, 57%, 11%);
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.hover .second{
+    color: hsl(229, 7%, 55%);
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.attribution { 
+    font-size: 14px;
+     text-align: center;
+     color: #fff;
+     }
+
+
+
+
+.attribution a {
+ color: hsl(251, 40%, 52%);
+ }
+
+
+
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="fylo-section">
+      <div class="logo">
+      <img src="images/logo.svg" alt="">
+      </div>
+
+      <div class="folders">
+        <div class="one">
+        <img src="images/icon-document.svg" alt="">
+        </div>
+
+        <div class="one">
+        <img src="images/icon-folder.svg" alt="">
+        </div>
+
+        <div class="one">
+        <img src="images/icon-upload.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    
+
+  <div class="storage">
+   
+  <h1>You’ve used <span class="first">815 GB</span> of your storage</h1>
+   
+  <div class="space">
+  <div class="percentages">
+    <div class="dot"></div>
+  </div>
+  </div>
+
+
+  <div class="pecentage">
+  <h3>0 GB</h3>
+  <h3>1000 GB</h3>
+  </div>
+  
+ 
+  <div class="hover">
+    <h2>185 <span class="second">GB Left</span></h2>
+    <div class="arrow"></div>
+    </div>
+
+
+  </div>
+  </div>
+
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> 
+    Coded by <a href="https://github.com/nchinche">Nchinche Pascal.</a></p>
+  </div>
+
+</body>
+</html>
